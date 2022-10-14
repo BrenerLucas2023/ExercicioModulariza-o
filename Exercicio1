@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+public class procedimentosFuncoes {
+    public static void main(String[] args) {
+    Scanner ler = new Scanner (System.in);
+    double n1 = 0, n2 = 0, numero = 0;
+    double b1 = 0, b2 = 0, b3 = 0, media= 0;
+    double inicio = 0, soma2 = 0; 
+    double mult = +1;
+    double num = +1;
+    double result = 0 ;
+      
+    int soma = 0 ;
+    double maior = Integer.MIN_VALUE;    
+    double  menor = Integer.MAX_VALUE;
+
+  
+    
+    System.out.println("Informe 1 - para letra A ");
+    System.out.println("Informe 2 - para letra B ");
+    System.out.println("Informe 3 - para letra C ");
+    System.out.println("Informe 4 - para letra D ");
+    System.out.println("Informe 5 - para letra E ");
+    soma = ler.nextInt();
+    System.out.println("O dobro do número digitado é:  => "+calculadora(n1, numero, maior, menor, b1, b2, b3, media, inicio, soma2, mult, num, result, soma));
+  
+  }
+    
+  
+    public static  double  calculadora(double n1,  double numero, double maior, double  menor, double b1, double b2, double b3, double media, double inicio, double soma2, double mult, double num, double result, int soma) {
+    Scanner ler = new Scanner (System.in);
+    double resultado=0.0;  
+	  switch (soma){
+    case 1:
+          System.out.println ("Informe um número: ");
+          n1 = ler.nextDouble();  	
+          resultado = (n1) *2;
+    break;
+    
+    case 2:
+          for (int i = 0; i <2; i ++){ 
+            System.out.println ("Informe o " + (i+1) + "º numero");
+            numero = ler.nextDouble();
+          if (numero >= maior){ 
+             maior = numero;
+          }
+          if (numero <= menor){ 
+              menor = numero;
+          }
+          }
+          System.out.println ("O maior valor informado: " + maior);
+          System.out.println ("O menor valor informado: " + menor);
+    break;
+    
+    case 3:
+          System.out.println ("Digite o primeiro valor: " );
+          b1 = ler.nextInt();
+          System.out.println ("Digite o segundo valor:  " ); 	
+          b2 = ler.nextInt();
+          System.out.println ("Digite o terceiro valor: " );	 
+          b3 = ler.nextInt();
+    
+          media = (b1 + b2 + b3) / 3;
+          System.out.println ("A media dos valores são: " + media );	 
+    break;
+
+    case 4:
+          System.out.print("Primeiro numero: ");
+          inicio = ler.nextDouble ();  
+    
+          for (int i = 2; i <=inicio; inicio--){
+          mult = inicio * (mult);
+          soma2 = mult;
+          System.out.println (inicio + " = " + soma2);
+          System.out.println ("");
+          }
+          
+          System.out.print  ("Este é o fatorial de: " + inicio);
+      
+    case 5:
+
+          System.out.print("Digite um número: ");
+          num = ler.nextInt ();  
+    
+    for (int i = 1; i <num; i++){
+          result += i ;
+          
+           System.out.println  (result + " + " + (i+1) + (" = ") + (i + result+1));
+        }
+        }
+	  return resultado;
+      }
+    }
