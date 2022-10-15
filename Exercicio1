@@ -65,7 +65,7 @@ public class procedimentosFuncoes {
     break;
 
     case 4:
-          System.out.print("Primeiro numero: ");
+          System.out.print("Digite um número: ");
           inicio = ler.nextDouble ();  
     
           for (int i = 2; i <=inicio; inicio--){
